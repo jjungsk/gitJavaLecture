@@ -1,0 +1,25 @@
+** 인터페이스(Interface)
+1. 명세서, 껍데기, 약속
+2. 추상메소드만 가질수있다. 상수 O
+   구현메소드 X, 변수 X, 생성자 X
+3. 추상메소드와 상수만 갖는 클래스의 일종.
+4. 형식
+접근제어자 interface InterfaceName {
+	상수;
+	접근제어자 [abstract] RT mN();  // 추상메소드 [abstract] 생략 가능
+}
+
+5. interface는 객체생성불가능.
+   >> 클래스에 implements(구현) 하여 객체 생성 가능.
+
+6. 5.형식
+public class ClassName extends ClassName implements IN1, IN2, IN3, ... {
+
+} >>> Interface는 다중 implements가 가능.
+
+7.
+상위	Class	   Class		Interface		Interface
+
+	extends	   X		implements	extends
+
+하위	Class	   Interface	Class		Interface

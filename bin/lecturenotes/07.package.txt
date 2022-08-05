@@ -1,0 +1,32 @@
+** package : 관련성 있는 클래스들의 묶음.
+1. package packagename;
+
+   접근제어자 class CN {
+
+   }
+2. packagename은 일반적으로 domain address 거꾸로.특정이름
+http://www.kitri.com
+ >> com.kitri.member
+    com.kitri.board
+
+3. package에 묶인 class 사용
+
+import packagename.ClassName;
+import packagename.*;(all Class)
+
+접근제어자 class CN {
+
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>> 사용자 정의 package
+
+
+
+* System Package
+java.lang : java language >> 가장 기본이 되는 package : import없이 사용 가능.
+java.awt : 윈도우창(GUI)
+java.awt.event : Event
+java.util : **** JCF ****
+java.io : 입출력
+java.net : network >> chat
+java.sql : JDBC

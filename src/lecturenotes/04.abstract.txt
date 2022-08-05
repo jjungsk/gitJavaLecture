@@ -1,0 +1,38 @@
+** 추상클래스(Abstract Class)
+1. 추상메소드를 하나이상 가진 클래스.
+2. 형식
+접근제어자 abstract class ClassName {
+	변수;(instance변수, class변수)
+
+	메소드
+	  - 구현메소드
+	  접근제어자 RT mN([args]) {  // method body
+		logic
+	  }
+
+	  - 추상메소드
+	  접근제어자 abstract RT mN([args]);  // method의 body가 없고 semicolon으로 끝남
+}
+
+ex)
+public void xxx(){} >> 추상메소드 X
+public abstract void xxx(); >> 추상메소드 O
+
+3. 추상클래스는 자신의 생성자를 이용하여 객체 생성 불가능. >> A a = new A(); >> X  // abstract method 가 존재. 즉, 불완전한 class이기 때문에 객체 생성 불가
+4. 추상클래스는 하위 클래스를 제어하기 위해 사용. (B extends A)  // 강제성을 주어 human error를 방지.
+   >> 추상클래스를 상속받는 하위 클래스는 반드시 추상 메소드를 override해야한다.
+5. 추상클래스의 객체 생성 방법  // * 보통 1~2번 사용 - 3~4번은 드물게 사용
+ 5-1. 하위클래스를 참조(다형성)
+      A a = new B();
+      Calendar cal = new GregorianCalendar();
+ 5-2. 자신의 객체를 return하는 static method 사용 // singletone의 방식과 유사
+      Calendar cal = Calendar.getInstance();
+ 5-3. 외부 클래스 사용.
+      Runtime rt = Runtime.getRuntime(); 
+      Process p = rt.exec("");
+ 5-4. 자신의 생성자로 객체 생성.(dynamic 객체 생성)  // ex> ButtonTest (basic_java : com.ssafy.abstracttest.ButtonTest)
+      A a = new A(){
+	추상메소드 override
+      };
+
+

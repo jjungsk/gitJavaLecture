@@ -1,0 +1,25 @@
+** 제어자(modifier) : abstract, final, static, ...
+변수 : 접근제어자 [modifier] DT 변수;
+method : 접근제어자 [modifier] RT mN(){}
+class : 접근제어자 [modifier] class CN{}
+
+1. final
+- 변수 : 상수화
+- method : 상속시 하위 클래스에서 override 불가.
+- class : 상속 불가능.
+
+2. static : 변수, method >> O,  class >> X(단, 내부클래스(inner class)에 가능)
+  >>>>>>>>>>>>>>>>>> 공유
+
+
+
+class A{
+	int x;
+	private int y;
+
+	class B {
+		x = 10;
+		y = 20;
+
+	}
+}
